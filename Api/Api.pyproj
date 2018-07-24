@@ -6,7 +6,7 @@
     <ProjectGuid>699fabfe-c19b-4435-b849-20d316078428</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>app.py</StartupFile>
+    <StartupFile>run.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,7 +27,37 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.py" />
+    <Compile Include="app\utils\CosHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="run.py" />
+    <Compile Include="app\app_1_0\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\bll\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\controllers\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\dao\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\RedisHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -42,6 +72,15 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\app_1_0\" />
+    <Folder Include="app\bll\" />
+    <Folder Include="app\controllers\" />
+    <Folder Include="app\dao\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
