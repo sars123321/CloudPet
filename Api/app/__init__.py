@@ -14,5 +14,3 @@ def create_app(config_name):
 app = create_app('develop' or 'default')
 db = SQLAlchemy(app)
 cosClient = CosHelper(app.config['COS_SECRET_ID'],app.config['COS_SECRET_KEY'],app.config['COS_REGION'],app.config['COS_BUCKET'])
-str1 = 1
-str2 = 2
