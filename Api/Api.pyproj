@@ -27,7 +27,23 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\app_1_0\controllers\usercontroller.py" />
+    <Compile Include="app\app_1_0\controllers\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\bll\userbll.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\dao\userdao.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\usermodel.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\utils\CosHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\log.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="run.py" />
@@ -38,9 +54,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\config.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="app\controllers\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\dao\__init__.py">
@@ -76,8 +89,8 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\app_1_0\" />
+    <Folder Include="app\app_1_0\controllers\" />
     <Folder Include="app\bll\" />
-    <Folder Include="app\controllers\" />
     <Folder Include="app\dao\" />
     <Folder Include="app\models\" />
     <Folder Include="app\utils\" />

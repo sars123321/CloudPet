@@ -2,7 +2,7 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:8227311@111.231.218.39:3306/cloudpet?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:8227311@111.231.218.39:3306/CloudPet?charset=utf8'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     REDIS_HOST = '111.231.218.39'
     REDIS_PORT = 6379
@@ -18,7 +18,7 @@ class DevelopConfig(Config):
     DEBUG = True
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:8227311@127.0.0.1:3306/cloudpet?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:8227311@127.0.0.1:3306/CloudPet?charset=utf8'
     REDIS_HOST = '127.0.0.1'
 
 config = {
