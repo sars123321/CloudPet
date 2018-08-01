@@ -27,6 +27,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\app_1_0\controllers\common.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\app_1_0\controllers\usercontroller.py" />
     <Compile Include="app\app_1_0\controllers\__init__.py">
       <SubType>Code</SubType>
@@ -34,10 +37,29 @@
     <Compile Include="app\bll\userbll.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\dao\likedao.py" />
+    <Compile Include="app\dao\resourcedao.py" />
+    <Compile Include="app\dao\rolesdao.py" />
+    <Compile Include="app\dao\groupdao.py" />
     <Compile Include="app\dao\userdao.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\models\groupmodel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\likemodel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\resourcemodel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\rolesmodel.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\models\usermodel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\basemodel.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\utils\CosHelper.py">

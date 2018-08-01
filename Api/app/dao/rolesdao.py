@@ -1,8 +1,8 @@
 from app import db
 from app import logging
-from app.models import User
+from app.models import Roles
 
-class UserDao:
+class RolesDao:
 
     @staticmethod
     def insert(item):
@@ -25,7 +25,7 @@ class UserDao:
     @staticmethod
     def delete(id):
         try:
-            item = db.session.query(User).get(id)
+            item = db.session.query(Roles).get(id)
             db.session.delete(item)
             db.session.commit()
         except Exception as e :

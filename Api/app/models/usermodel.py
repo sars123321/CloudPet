@@ -4,6 +4,7 @@ import datetime
 class User(db.Model):
     __tablename__ = 'User'
     id = db.Column(db.BigInteger , primary_key = True)
+    roleid = db.Column(db.Integer , nullable = False)
     mobile = db.Column(db.String(16) , nullable = False)
     password = db.Column(db.String(128) , nullable = False)
     nick = db.Column(db.String(32) , nullable = True)
@@ -14,6 +15,7 @@ class User(db.Model):
         self.mobile = mobile
         self.nick = nick
         self.password = password
+        self.roleid = 0
         self.createTime  = datetime.datetime.now()
         self.lastlogin = self.createTime
 
