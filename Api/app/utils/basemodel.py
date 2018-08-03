@@ -1,10 +1,15 @@
 class BaseModel(object):
-    Code = 0
+    Code = ''
     Message = ''
+    ErrCode = ''
+    Data = None
 
     def to_json(self):
-        return {
+        d = {
             "Code" :self.Code,
-            "Message" : self.Message
+            "Message" : self.Message,
+            "ErrCode" : self.ErrCode
             }
-
+        if self.Data :
+            d['Data'] = self.Data
+        return d

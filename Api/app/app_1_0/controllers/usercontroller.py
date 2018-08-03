@@ -7,7 +7,7 @@ class UserController:
 
     @api.route('/', methods = ['GET'])
     @api.route('/user/register',methods = ['GET'])
-    @login_check
+    @login_auth
     def register():
        #id = UserBLL.reg()
        return jsonify({'code':0,'id':id})

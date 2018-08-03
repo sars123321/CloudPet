@@ -30,3 +30,11 @@ class UserDao:
             db.session.commit()
         except Exception as e :
             logging.error('ERROR:' + e.message)
+
+    @staticmethod
+    def getItemByMobile(mobile):
+        try:
+            item = db.session.query(User).filter_by(mobile=mobile).first()
+            return item
+        except Exception as e:
+            logging.error('ERROR' + e.message)

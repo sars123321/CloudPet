@@ -27,6 +27,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\app_1_0\controllers\authcontroller.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\app_1_0\controllers\common.py">
       <SubType>Code</SubType>
     </Compile>
@@ -63,6 +66,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\utils\CosHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\codeenum.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\utils\log.py">

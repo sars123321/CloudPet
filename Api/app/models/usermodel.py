@@ -20,5 +20,5 @@ class User(db.Model):
         self.lastlogin = self.createTime
 
     def __repr__(self):
-        return '<User %r' % self.Id
+        return '<User %r' % self.id
 
