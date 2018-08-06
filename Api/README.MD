@@ -1,33 +1,33 @@
 API
 ===
 
-#api签名
+# api签名
 
 
-###APPID
+### APPID
 
 `cloudpet`
 
 
-###APPSECRET
+### APPSECRET
 
 `4e3de007cd2fc7372ec161208b2ce5313a6b3c42ff82adba2e5c776ba8df736e27b0745967b5cbd506801027b3a05cc7aef84d3055466d7987806fb14fe405a3`
 
-###Content-Type
+### Content-Type
 
 `application/json`
 
-###签名参数
+### 签名参数
 
 `auth`
 本参数写入headers
 
-###重要说明
+### 重要说明
 
 `timestemp`
 为固定参数，必须要传取当前时间的unix时间戳10位（精确到秒）与服务器当前时间差保证在10秒之内，否则签名将无效
 
-###签名规则
+### 签名规则
 
 例：
 `body:{userid:123,name:'123321',type:10,timestemp:1222}`
@@ -49,7 +49,7 @@ API
 
 `sign = hmac(APPSECRET, BASESTR , digestmod='MD5').tolower()`
 
-###签名传递
+### 签名传递
 
 ```javascript
 content = {userid:123,name:'123321',type:10,timestemp:1222}
@@ -63,4 +63,4 @@ fetch('http://localhost:5001/api/v1/user/register',{method:'POST',headers: {'Con
 
 `97c5f6d08c61d0f5575e17203890b535`
 
-#建议使用Crypto.js
+# 建议使用Crypto.js
