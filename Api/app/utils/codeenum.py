@@ -20,5 +20,6 @@ class CommonErrorCode(Enum):
     TokenIsMissing = 900002
     TokenExpired = 900003
     TokenInvalid = 900004
+    SignError = 900005
 
     

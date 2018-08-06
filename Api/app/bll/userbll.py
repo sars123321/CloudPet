@@ -15,3 +15,6 @@ class UserBLL:
         if user.password != password:
             return CE.ErrorMessage(CE.UserErrorCode.PasswordError)
         return CE.SuccessMessage(user)
+
+    def getUserById(id):
+        return UserDao.getItemById(id)

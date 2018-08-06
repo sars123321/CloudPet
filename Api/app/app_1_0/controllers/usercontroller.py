@@ -5,9 +5,8 @@ from .common import *
 
 class UserController:
 
-    @api.route('/', methods = ['GET'])
-    @api.route('/user/register',methods = ['GET'])
-    @login_auth
+    @api.route('/user/register',methods = ['POST'])
+    @sign
     def register():
        #id = UserBLL.reg()
-       return jsonify({'code':0,'id':id})
+       return jsonify({'code':0,'id':'123'})

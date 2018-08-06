@@ -69,3 +69,14 @@ class AuthController:
         model.ErrCode = '000000'
         model.Data = {'userid' : tokenContent['userid'] , 'token' : newtoken , 'refreshtoken' : newrefreshtoken}
         return jsonify(model.to_json())
+
+    @api.before_request
+    def before_request():
+        token = request.headers.get('token')
+        tokenContentStr = current_app.redis.get(token)
+        if not tokenContentStr:
+            return
+        user = json.loads(tokenContentStr)
+        if user:
+            g.current_user = UserBLL.getUserById(user['userid'])
+        return

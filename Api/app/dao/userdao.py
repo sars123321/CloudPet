@@ -38,3 +38,11 @@ class UserDao:
             return item
         except Exception as e:
             logging.error('ERROR' + e.message)
+
+    @staticmethod
+    def getItemById(id):
+        try:
+            item = db.session.query(User).get(id)
+            return item
+        except Exception as e:
+            logging.error('ERROR' + e.message)
